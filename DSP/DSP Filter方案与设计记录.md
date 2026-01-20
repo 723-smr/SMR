@@ -44,14 +44,14 @@ $$
 
 ## （2）抑制replicas和spurs
 
-所以，本质上，从FPGA打进芯片的方波并不是Original Signal。原始信号是式（1-2）至(1-4)提及的 $s(n)$。或者可以用提及的delta累加和序列表示。而FPGA通过ZOH将Original Signal输出的，这样信号就由原本的离散Delta序列，变成了连续时间域（Continuous-Time Domain）的方波。**你也可以将这个ZOH也视作为一种DAC**，其输出$y(t)$可以写作：
+所以，本质上，从FPGA打进芯片的方波并不是Original Signal。Original Signal(原始信号)是式（1-2）至(1-4)提及的 $s(n)$。或者可以用提及的delta累加和序列表示。
 
+而**FPGA通过 ZOH 将Original Signal输出的**，这样信号就由**原本的离散Delta序列**，变成了**连续时间域（Continuous-Time Domain）的方波**。你也可以将这个**ZOH也视作为一种DAC**，其输出$y(t)$可以写作：
 $$
 
 y(t) = \sum_{k} x[k]h_{ZOH}(t-kT_s)
 
 $$
-
 其中$T_s$是采样周期。而ZOH的Impulse Response是一个“保持一个周期”的矩形：
 
 $$
