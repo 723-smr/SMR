@@ -202,6 +202,5 @@ Eg：
 
 ![](assets/DSP%20Fundamentals/file-20260119214033160.png)
 上采样在原始采样率之间插入两个零值样本，将采样率提高3倍。在频域中围绕原始采样率fs对称的两个频谱图像现在存在于0Hz和新的上采样采样率一半fu/2之间的区域中。
-![](assets/DSP%20Fundamentals/file-20260119214049370.png)
 然后必须使用低通镜像抑制滤波器去除这两个光谱图像，这在时域中表现为信号的平滑。
-![](assets/DSP%20Fundamentals/file-20260119214103863.png)
+![](assets/DSP%20Fundamentals/file-20260120201717495.jpg)
