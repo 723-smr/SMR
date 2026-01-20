@@ -239,33 +239,24 @@ $$
 #### a. 生成一个Thermometer Decoder
 
 将以下的代码输入到virtuoso的veriloga的cellview中，之后生成symbol
-
-![a3cd0082bb69c99f22ba9cac4bfd3654.png](en-resource://database/794:1)
+![](assets/SCPA/file-20260120104610413.png)
 
 存入电脑的文件后，在tb里面导入vsource：
-
-![8ad3abf116e4f8e342abfdf2c6b52c78.png](en-resource://database/921:1)
+![](assets/SCPA/file-20260120104618286.png)
 
   
 
 #### b. 用与门进行上混频
 
 利用以下代码生成一个与门
-
-![fa0d9d45538ca0a7b496617255418617.png](en-resource://database/795:1)
-
-  
+![](assets/SCPA/file-20260120104627683.png)
 
 #### c. 码字上混频打入SCPA
 
 将码字和载波信号输入与门对基带信号进行上混频，再打入SCPA，得到结果是一个线性的三角形
-
-![9f46248b3b73c07c6450fd5fe59026e8.png](en-resource://database/913:1)
-
->#### `这里要特别注意一点！！！！！`
-
+![](assets/SCPA/file-20260120104644075.png)
+> #### `这里要特别注意一点！！！！！`
 >输入的基带信号应该给低频，比如说200MHz左右，而不是直接用嘉睿师兄的软件生成2GHz的信号，这样是会出问题的！一定要用载波频率的信号源对基带信号进行上混频！！！！！！！
-
 >注意这个上混频时钟信号用于差分结构时应该是两个反相的时钟！！！！！！
 
   
