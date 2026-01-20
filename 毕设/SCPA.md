@@ -266,25 +266,16 @@ $$
 用symbol封装切分后的scpa 单元
 
 添加pin：
-
-![22e7395bb9d7c171f556168671e69faf.png](en-resource://database/915:1)
+![](assets/SCPA/file-20260120104716102.png)
 
 形成symbol：
-
-![7e9fac155f7dcb477de253762bf448d9.png](en-resource://database/917:1)
-
-![c5457081b2b373c0dc50e638f790e17d.png](en-resource://database/919:1)
+![](assets/SCPA/file-20260120104728882.png)
+![](assets/SCPA/file-20260120104746854.png)
 
 复用式instance引入，改名字即可，图中显示的是复用10个
 
 >symbol的形状可以自己画
 
-  
-
-  
-
-  
-
 # 十、最后形成这样的电路：
 
-![6e0d9b9a8536f5cfb1ca6064f990a29e.png](en-resource://database/923:1)
+![](assets/SCPA/file-20260120104758612.png)
