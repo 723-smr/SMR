@@ -53,43 +53,33 @@ y(t) = \sum_{k} x[k]h_{ZOH}(t-kT_s)
 
 $$
 其中$T_s$是采样周期。而ZOH的Impulse Response是一个“保持一个周期”的矩形：
-
 $$
 
 h_{ZOH}(t)=1, only \ when \ 0 \le t < T_s
 
 $$
-
-其时域上就是一个方波，由式（1-1）可以快速得出其傅里叶变换：
-
+其**时域上就是一个方波**，在**频域**上由式（1-1）可以快速得出其傅里叶变换：
 $$
 
 \mathscr{F}[h_{ZOH}(t)]=H_{ZOH}(\omega)= T_s Sa(\frac{T_s}{2}\omega)
 
 $$
-
 如果要更严谨，还要考虑相位：
-
 $$
 
 H_{ZOH}(j\omega)=\int_{0}^{T_s}e^{-j\omega t}h_{ZOH}(t)dt = \frac{1-e^{-j\omega \frac{T_s}{2}}}{j\omega} = T_s Sa(\frac{T_s}{2}\omega) e^{-j\omega \frac{T_s}{2}}
 
 $$
-
 - 幅度上：ZOH会在频率 $\omega$ 处，让信号产生大小为 $T_s Sa(\frac{T_s}{2}\omega)$ 的杂散。
 
 - 相位上：ZOH会在频率 $\omega$ 处，给信号提供一个半周期time delay $e^{-j\omega \frac{T_s}{2}}$
 
-因此，不论输入信号以多少的频率输入，经过ZOH，总会有一个sinc包络的杂散。
-
-  
+因此，不论输入信号以多少的频率输入，**经过ZOH，频域上总会有一个sinc包络的杂散**（时域上**卷积**了方波，则在**频域**上会乘积sinc包络）。
 
 那么这个sinc包络的杂散送进电路中会造成什么后果呢？这就不得不回顾一下DPA的工作机理了。
 
-最简单的DPA是这样设计的：在Output Matching之前，所有电路模块的行为都是开关行为，也就是说，这之间传递的一直是方波。直到具有选频作用的Output Matching network输出匹配网络，将carrier frequency载波频率部分提取出来。如果这个Output Matching是LC单频点滤波的，我的方波自然可以送进来，sinc spurs自然被滤除；
-
-![29d754434f0294965bda5dbce1bd8b12.png](en-resource://database/568:1)
-
+最简单的DPA是这样设计的：在Output Matching之前，所有电路模块的行为都是开关行为，也就是说，这之间传递的一直是方波。直到具有选频作用的Output Matching network输出匹配网络，将carrier frequency载波频率部分提取出来。如果这个Output Matching是LC单频点滤波的，我的方波自然可以送进来，sinc spurs（sinc包络杂散）自然被滤除；
+![](assets/DSP%20Filter方案与设计记录/file-20260120214007158.png)
 但是如果Output Matching的滤波mask不是单点的呢？Namely，如果Output Matching的滤波是一个宽带的滤波，可以让sinc spurs大部分都通过的话，输出岂不就带有很高的杂散了吗？因此，我们需要对原本的方波进行**数字滤波**，再将滤波好的信号进行DAC处理。
 
   
