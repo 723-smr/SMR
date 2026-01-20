@@ -190,34 +190,25 @@ $$
 送到计算器
 
 点一下黑色部分再点一下线，截取部分波形
-
-![607db778f613fdb141c6dea0edc64513.png](en-resource://database/878:1)
+![](assets/SCPA/file-20260120104348641.png)
 
 得到以下在计算器的界面：
-
-![947d026df6cd18c3eff7b4d6830f4207.png](en-resource://database/880:1)
-
+![](assets/SCPA/file-20260120104358032.png)
 在公式搜索框搜索rms，计算**均方根**:
-
-![790311b82fdfc66160d82acb41fdd3d7.png](en-resource://database/882:1)
+![](assets/SCPA/file-20260120104409350.png)
 
 点击齿轮，将其送回仿真框：
-
-![c1aa69b42970f24378364f600683210b.png](en-resource://database/884:1)
+![](assets/SCPA/file-20260120104418582.png)
 
 回到仿真台，右键->Edit，对计算出来的值进行改名:
-
-![f1dcd265282c5eb408e6dd15e76ea1d8.png](en-resource://database/886:2)
-
-![f1dcd265282c5eb408e6dd15e76ea1d8.png](en-resource://database/886:2)
+![](assets/SCPA/file-20260120104428704.png)
+![](assets/SCPA/file-20260120104437006.png)
 
 将其送回计算器继续计算Pout:
-
-![3353318222ff7fc84f88abc5dc45422f.png](en-resource://database/890:1)
+![](assets/SCPA/file-20260120104444032.png)
 
 回到计算器，找到Expression Editor，有时候会藏在左下角，仔细找找:
-
-![7d4780caec867122890f0014fe40bbec.png](en-resource://database/892:1)
+![](assets/SCPA/file-20260120104454270.png)
 
 计算Pout（Urms的平方/50，注意平方的表示方法）：
 
