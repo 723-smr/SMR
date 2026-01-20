@@ -78,7 +78,7 @@ $$
 
 那么这个sinc包络的杂散送进电路中会造成什么后果呢？这就不得不回顾一下DPA的工作机理了。
 
-最简单的DPA是这样设计的：在Output Matching之前，所有电路模块的行为都是开关行为，也就是说，这之间传递的一直是方波。直到具有选频作用的Output Matching network输出匹配网络，将carrier frequency载波频率部分提取出来。如果这个Output Matching是LC单频点滤波的，我的方波自然可以送进来，sinc spurs（sinc包络杂散）自然被滤除；
+最简单的DPA是这样设计的：在Output Matching之前，所有电路模块的行为都是开关行为，也就是说，这之间传递的一直是方波。直到具有选频作用的Output Matching network输出匹配网络，将carrier frequency载波频率部分提取出来。如果这个Output Matching是**LC单频点滤波**的，我的方波自然可以送进来，sinc spurs（sinc包络杂散）自然被滤除；
 ![](assets/DSP%20Filter方案与设计记录/file-20260120214007158.png)
 但是如果Output Matching的滤波mask不是单点的呢？Namely，如果Output Matching的滤波是一个宽带的滤波，可以让sinc spurs大部分都通过的话，输出岂不就带有很高的杂散了吗？因此，我们需要对原本的方波进行**数字滤波**，再将滤波好的信号进行DAC处理。
 
