@@ -42,8 +42,6 @@ $$
 
 *注意，有时候可能需要根据设计需求调整 $s(n)$ 的顺序，可能是从低位（LSB）到高位（MSB）或者从MSB到LSB。即有时候 $s[n]= 1010$，这种最先读取LSB的叫做小端法（little endian）， 有时候 $s[n] = 0101$，这种最先读取MSB的叫做大端法（big endian）*
 
-  
-
 ## （2）抑制replicas和spurs
 
 所以，本质上，从FPGA打进芯片的方波并不是Original Signal。原始信号是式（1-2）至(1-4)提及的 $s(n)$。或者可以用提及的delta累加和序列表示。而FPGA通过ZOH将Original Signal输出的，这样信号就由原本的离散Delta序列，变成了连续时间域（Continuous-Time Domain）的方波。**你也可以将这个ZOH也视作为一种DAC**，其输出$y(t)$可以写作：
