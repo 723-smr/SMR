@@ -211,32 +211,26 @@ $$
 ![](assets/SCPA/file-20260120104454270.png)
 
 计算Pout（Urms的平方/50，注意平方的表示方法）：
-
-![cbb8e579af6b7496e4623108a9ad8a67.png](en-resource://database/901:1)
+![](assets/SCPA/file-20260120104503617.png)
 
 同样计算完回到仿真处改名（改名为Po）：
-
-![15db47da360b52c1a2a1e2f836ff1403.png](en-resource://database/903:1)
+![](assets/SCPA/file-20260120104510944.png)
 
 计算Idc，也就是AVDD的输入电流的平均值，同样送回仿真参数，改为Idc：
-
-![e925e0ce575b0614ec1a04b1972133e9.png](en-resource://database/905:1)
+![](assets/SCPA/file-20260120104523730.png)
 
 再根据Pdc=Idc×1.1（t40工艺里面VDD为1.1v）
 
 最后计算Pout=（Po/Pdc）×100，重复以上步骤送到工作台并重新命名：
-
-![7d347231b7bb6134fb7c5263d5827aa7.png](en-resource://database/907:1)
+![](assets/SCPA/file-20260120104538746.png)
 
 最后勾选上述几个数值的save，点击右边框出来的plot可以在value处看到数值：
-
-![21a6df29b8d156bf3a8f0beef6335728.png](en-resource://database/909:1)
+![](assets/SCPA/file-20260120104549126.png)
 
 # 七、virtuoso切片
 
 >Parameters
-
->![a1cd34d8432aa9fefdfa3495207e67c7.png](en-resource://database/911:1)
+>![](assets/SCPA/file-20260120104559810.png)
 
   
 
