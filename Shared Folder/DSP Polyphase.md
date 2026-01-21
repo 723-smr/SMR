@@ -52,9 +52,13 @@ Y(z) = H(z)X_{(k)}(z) = H(z)X(z^L).
 $$
 已知Tap Coefficient为N（i.e.只有在0~N-1范围内$h[n]$才不为0，因此省略掉这个范围外的$h[n]$）
 $$
+\begin{aligned}
 
-H(z) = \sum_{n=-\infty}^{\infty} h[n]z^{-n} =\sum_{n = 0}^{N-1} h[n]z^{-n}
+H(z) = \sum_{n=-\infty}^{\infty} h[n]z^{-n} =\sum_{n = 0}^{N-1} h[n]z^{-n}\\
 
+X(z^L) = \sum_{n=-\infty}^{\infty} h[n]z^{-n} =\sum_{k = 0}^{k-1} x[k]z^{-kL}\\
+
+\end{aligned}
 $$
 可以得到（为了便于辨认，将$x[n]$替换为$x[k]$），
 $$\begin{aligned}
