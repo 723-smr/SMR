@@ -75,13 +75,11 @@ Y(z) &= \sum_{k = 0}^{K-1}x[k]z^{-kL} \cdot \sum_{n=0}^{KL-1} h[n]z^{-n}\\
 
 \end{aligned}$$
 转换到时域可以得到，
-
 $$
 
-y[mL+r] = \sum_{k=0}^{K-1} x[k] \cdot h[(m-k)L+r] \tag{1}.
+y[n] = \sum_{k=0}^{K-1} x[k] \cdot h[n-Lk]
 
 $$
-
 其中，$y[0]、y[8]、y[16]$这样几个点之间的间隔才符合插值前的滤波输出间隔。只有在$(m-k)>0$且$(m-k)L+r<N-1$时$\{x[k]h[(m-k)L+r]\}$才有意义，否则为0。
 
   
