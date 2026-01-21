@@ -56,7 +56,7 @@ $$
 
 H(z) = \sum_{n=-\infty}^{\infty} h[n]z^{-n} =\sum_{n = 0}^{N-1} h[n]z^{-n}\\
 
-X(z^L) = \sum_{n=-\infty}^{\infty} h[n]z^{-n} =\sum_{k = 0}^{k-1} x[k]z^{-kL}\\
+X(z^L) = \sum_{n=-\infty}^{\infty} h[n]z^{-n} =\sum_{k = 0}^{K-1} x[k]z^{-kL}\\
 
 \end{aligned}
 $$
