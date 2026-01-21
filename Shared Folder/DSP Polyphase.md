@@ -124,5 +124,5 @@ $$
 r为定值的每一行对应一种间隔的相移（相移实际在Serializer种完成），为了防止歧义（我之前理解错误过），给出一组sub-FIR的真正示意图像（并非我们真正使用的，只是示意），
 
 ![3ea00bfe45fa749d90c57ef787ee7b8e.png](en-resource://database/598:1)@w=600
-![](assets/DSP%20Polyphase/file-20260121213110202.png)
+
 ***
