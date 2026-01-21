@@ -71,7 +71,7 @@ Y(z) &= \sum_{k = 0}^{K-1}x[k]z^{-kL} \cdot \sum_{n=0}^{KL-1} h[n]z^{-n}\\
 
   
 
-&= \sum_{k=0}^{K-1}x[k] \cdot \{z^{-kL}\sum_{m=0}^{\frac{N}{L}-1}\sum_{r=0}^{L-1}h[mL+r]z^{-n}\}
+&= \sum_{k=0}^{K-1}x[k] \cdot \{z^{-kL}\ H(z)\}
 
 \end{aligned}$$
 转换到时域可以得到，
