@@ -5,11 +5,10 @@
 对一个离散序列进行ZOH，相当于用一个脉宽和采样周期一致的方波去卷积上这个周期序列：
 $$
 \begin{aligned}
-	y_{ZOH} &= x[n] * [u(t) - u(t-T_S)]\\
-	&= \sum_{n}x[n][u(t-nT_s) - u(t-(n+1)T_s)]
+	y_{ZOH} = \sum_{n}x[n][u(t-nT_s) - u(t-(n+1)T_s)]
 \end{aligned}
 $$
-
+时域卷积等于频域相乘，一个方波
 
 
 
@@ -228,4 +227,4 @@ $y[0]$~$y[7]$ 以3.2GHz的频率输出，等到第二个基带周期到来，$y[
 ***
 
 ## （3） **FIR Optimization**
-
+利用（
