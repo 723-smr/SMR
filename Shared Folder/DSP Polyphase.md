@@ -5,19 +5,19 @@
 ***
 ### Parameters
 
-**Tap Coefficients**:$\ N$
+- **Tap Coefficients**:$\ N$
 
-**Original Samples**:$\ K$
+- **Number of Original Samples**:$\ K$
 
-**Input**: $\ x[n] \overset{z}\leftrightarrow X[z]$
+- **Input**: $\ x[n] \overset{z}\leftrightarrow X[z]$
 
-**Interpolation Factor**:$\ L$
+- **Input after IoZ**:$\ x_{(L)}[n]\overset{z}\leftrightarrow X_{{L}}(z)$
 
-**FIR Impulse Response**:$\ h[n]/H(z)$
+- **Interpolation Factor**:$\ L$
 
-**Output**:$\ y[z]/Y(z)$
+- **FIR Filter's Impulse Response**:$\ h[n]\overset{z}\leftrightarrow H(z)$
 
-**Input after IoZ**:$\ x_{(L)}[n]/X_{{L}}(z)$
+- **Output**:$\ y[z]\overset{z} \leftrightarrow Y(z)$
 ***
 ## （1）传统的先IoZ再低通滤波的方式
 ### Step 1. Interpolation.
@@ -121,9 +121,11 @@ $$
 
 那就可以得出结论，我们需要将FIR滤波器的冲激响应分成$L$组，以方便对应相移要求。另外每组前后两个冲激响应应该差L个样本点。
 
+
+
+![](assets/DSP%20Polyphase/file-20260122112037328.png)
+![](assets/DSP%20Polyphase/file-20260122111952015.jpg)
 **上采样前后clock：**$y[0]$~$y[7]$每个相位都相差插零后一个的间隔，同理$y[8]$~$y[15]$每个点相位也相差插零后一个的间隔，依此类推。$y[0]$和$y[8]$之间相差的是插零前的一个间隔，即依次输入信号$x[k]$不同bit的间隔。
-![](assets/DSP%20Polyphase/file-20260121213726586.png)
-![](assets/DSP%20Polyphase/file-20260121213858483.png)
 相邻$y[k]$对应一种间隔的相移，但相移实际在Serializer种完成（对应上图High-Speed Serializer中的$Z^{-1}$)。为了防止歧义，给出一组FIR的示意图像如下，图中相同颜色的为同一组sub-FIR,在sub-FIR内$x[k]$与$h[k]$只是数值上进行的处理，并没有进行时延！比如，当$x[0]$打入的时候
 ![](assets/DSP%20Polyphase/file-20260121213926710.png)
 ***
