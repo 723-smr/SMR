@@ -4,7 +4,10 @@
 
 对一个离散序列进行ZOH，相当于用一个脉宽和采样周期一致的方波去卷积上这个周期序列：
 $$
-	y_{ZOH} = x[n] * [u(t-nT_s) - u(t-(n+1)T_S)]
+\begin{aligned}
+	y_{ZOH} &= x[n] * [u(t-nT_s) - u(t-(n+1)T_S)]\\
+	&= \sum_{n}x[n]u{}
+\end{aligned}
 $$
 
 
@@ -223,3 +226,4 @@ $y[0]$~$y[7]$ 以3.2GHz的频率输出，等到第二个基带周期到来，$y[
 * 这里的滤波效果体现在插零的地方有了幅度：
 *![](assets/DSP%20Polyphase/file-20260122134737404.png)
 ***
+## （3） **FIR Filter和Serializer的逻辑**
