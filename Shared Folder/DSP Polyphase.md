@@ -6,7 +6,7 @@
 $$
 \begin{aligned}
 	y_{ZOH} &= x[n] * [u(t-nT_s) - u(t-(n+1)T_S)]\\
-	&= \sum_{n}x[n]u{}
+	&= \sum_{n}x[n][u(t-nT_s) - u(t-(n+1)T_s)]
 \end{aligned}
 $$
 
@@ -226,4 +226,5 @@ $y[0]$~$y[7]$ 以3.2GHz的频率输出，等到第二个基带周期到来，$y[
 * 这里的滤波效果体现在插零的地方有了幅度：
 *![](assets/DSP%20Polyphase/file-20260122134737404.png)
 ***
-## （3） **FIR Filter和Serializer的逻辑**
+
+## （3） **FIR Filter**
