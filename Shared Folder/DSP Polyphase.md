@@ -36,17 +36,36 @@ $$
 
 ## (3)抑制高频信号的方式
 
-### 1. 
+### 1. 插零插值（Interpolation of Zero， IoZ）
 
+在原采样点中间以一定间隔插入零，得到的效果就是原频谱在第一奈奎斯特区中被压缩了（$[-\pi, \pi]$是第一奈奎斯特区），但是第一奈奎斯特区同时也出现了另外的镜像成分：
+![](assets/DSP%20Polyphase/file-20260122140940575.png)
 
+### 2. 低通滤波
 
+为了滤去第一奈奎斯特区多余的镜像谱，将插值后的信号序列输入一个低通滤波器，来滤掉第一奈奎斯特区中新出现的镜像成分：
+![](assets/DSP%20Polyphase/file-20260122141227450.png)
+
+### 3. 结果分析
+
+因为相对于其它镜像谱来说，sinc函数在第一个镜像频谱的函数值最大，所以我们只用计算一下sinc函数在第一个镜像的起始点的值和零点的比值来说明目的即可：
+$$
+	Attenuation = 20lg[sinc(1-\frac{f_{bb}}{f_s})]
+$$
+可以发现，基带信号频谱宽度占第一奈奎斯特区的比例越小，sinc对于第一个镜像的抑制就越厉害，这就是要大费周章先进行插零插值再进行低通滤波的原因。
+
+但是这样的方法也有缺点，它需要进行插零插值和低通滤波两步，而现在有一种叫Polyphase的方式，能够将这两步合成一步。接下来将进行对这种方式的数学推导。
 
 # 二、Polyphase数学推导
 
-对于FIR插值滤波器，其Interpolation Factor = L，如果input freq. = $f_s$，
-则output freq. = $L\times f_s$，先从数学层面理解：
+对于FIR插值滤波器，其Interpolation Factor = L，如果 输入信号的频率为$f_{bb}$ ，
+则$f_{out} = f_{up}= L\times f_s$，先从数学层面理解：
 ***
 ### Parameters
+
+- **Input Frequency**：$f_{bb}$
+
+- **Output Frequency**：$f_{up}$
 
 - **Tap Coefficients**:$\ N$
 
