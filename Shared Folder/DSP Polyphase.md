@@ -10,8 +10,14 @@ f_s(t)&=f(t)\delta_T(t).
 \end{aligned}
 $$
 时域相乘，频域卷积：
-
-
+$$
+\begin {aligned}
+\mathscr{F}[f_s(t)] &= F_s(\omega) = \frac{1}{2\pi} F(\omega) * \frac{2\pi}{T_s} \sum_{n=-\infty}^{\infty} \delta(\omega - n\omega_s) = \frac{\omega_s}{2\pi} \sum_{n=-\infty}^{\infty} F(\omega-n\omega_s),\\
+i.e.\, \, \, \, \, F_s(\omega) &= \frac{\omega_s}{2\pi} \sum_{n=-\infty}^{\infty} F(\omega-n\omega_s).
+\end {aligned}
+$$
+也就是原本一个连续波形的频谱在频域中被周期延拓了，如下图所示：
+![](assets/DSP%20Polyphase/file-20260122135743769.png)
 ## （2）ZOH的后果
 
 
