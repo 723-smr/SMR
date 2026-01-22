@@ -220,7 +220,7 @@ $$
 $$
 	f_{up} = L \times f_{bb} 
 $$
-$y[nL]$~$y[(n+1)L - 1]$每个序列都相差$\frac{1}{L\times f_{bb}}$，$y[nL]$ 和 $y[(n+1)L]$ 相差的是$\frac{1}{f_{bb}}$。
+$y[nL]$~$y[(n+1)L - 1]$每个序列都相差$\frac{1}{L\times f_{bb}}$，$y[nL]$ 和 $y[(n+1)L]$ 相差$\frac{1}{f_{bb}}$。
 ***
 >**e.g.**
 
