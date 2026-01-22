@@ -4,8 +4,12 @@
 
 一个离散序列可以看成对一个连续波形进行采样后的结果，也就是在时域中用一个周期冲激序列乘以一个连续波形：
 $$
-	
+\begin{aligned}
+\delta_T(t)&=\sum_{n=-\infty}^{\infty}\delta(t-nT_s),\\
+f_s(t)&=f(t)\delta_T(t).
+\end{aligned}
 $$
+时域相乘，频域卷积：
 
 
 ## （2）ZOH的后果
