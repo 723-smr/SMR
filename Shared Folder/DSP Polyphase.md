@@ -164,7 +164,7 @@ $$
 ![](assets/DSP%20Polyphase/file-20260122113206934.png)
 ![](assets/DSP%20Polyphase/file-20260122111952015.jpg)
 
-**Serializer和基带信号的CLK差异：**
+**Serializer和基带信号的CLK关系：**
 $y[0]$~$y[7]$每个相位都相差插零后一个的间隔，同理$y[8]$~$y[15]$每个点相位也相差插零后一个的间隔，依此类推。$y[0]$和$y[8]$之间相差的是插零前的一个间隔，即依次输入信号$x[k]$不同bit的间隔。
 相邻$y[k]$对应一种间隔的相移，但相移实际在Serializer种完成（对应上图High-Speed Serializer中的$Z^{-1}$)。为了防止歧义，在sub-FIR内$x[k]$与$h[k]$只是数值上进行的处理，并没有进行时延！比如，当$x[0]$打入的时候
 ![](assets/DSP%20Polyphase/file-20260121213926710.png)
